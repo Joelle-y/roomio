@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/roomio/favicon.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+    <title>roomio · 合租生活管家</title>
+    <script type="module" crossorigin src="/roomio/assets/index-B2si_i5b.js"></script>
+    <link rel="stylesheet" crossorigin href="/roomio/assets/index-BHlapwgD.css">
+  </head>
+  <body>
+    <div id="root"></div>
+    <script>
+      // GitHub Pages SPA redirect: 处理 404.html 跳转回来的路径
+      (function () {
+        var l = window.location;
+        if (l.search.indexOf('?/') === 0) {
+          var decoded = l.search.slice(2) + (l.hash || '');
+          var segs = l.pathname.split('/');
+          var base = segs.slice(0, 2).join('/') + '/';
+          var path = decoded.replace(/~and~/g, '&');
+          history.replaceState(null, '', base + path);
+        }
+      })();
+    </script>
+  </body>
+</html>
